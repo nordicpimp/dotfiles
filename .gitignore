@@ -1,0 +1,6 @@
+# Generated color output — never commit these
+.cache/
+
+# Secrets
+*.secret
+*.credentials
