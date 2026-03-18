@@ -1,0 +1,38 @@
+* {
+    bg:      #1e1e2e;
+    fg:      #cdd6f4;
+    accent:  #89b4fa;
+    urgent:  #f38ba8;
+
+    background-color: transparent;
+    text-color:       @fg;
+}
+
+window {
+    background-color: @bg;
+    border-radius:    8px;
+    padding:          12px;
+    width:            40%;
+}
+
+inputbar {
+    background-color: @bg;
+    padding:          8px;
+    border-radius:    4px;
+}
+
+listview {
+    background-color: transparent;
+    lines:            8;
+    spacing:          4px;
+}
+
+element {
+    padding:       8px;
+    border-radius: 4px;
+}
+
+element selected {
+    background-color: @accent;
+    text-color:       @bg;
+}

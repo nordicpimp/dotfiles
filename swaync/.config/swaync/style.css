@@ -1,0 +1,23 @@
+@import "/home/nordicpimp/.cache/matugen/colors-waybar.css";
+
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13px;
+}
+
+.notification-row {
+    outline: none;
+}
+
+.notification {
+    background-color: @surface;
+    border-radius: 8px;
+    margin: 6px;
+    padding: 0;
+}
+
+.control-center {
+    background-color: @background;
+    border-radius: 8px;
+    padding: 8px;
+}

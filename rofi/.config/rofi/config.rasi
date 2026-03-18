@@ -1,0 +1,9 @@
+configuration {
+    modi:           "drun,run,window";
+    show-icons:     true;
+    icon-theme:     "Papirus-Dark";
+    font:           "JetBrainsMono Nerd Font 12";
+    drun-display-format: "{name}";
+}
+
+@theme "/home/nordicpimp/.config/rofi/theme.rasi"

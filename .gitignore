@@ -4,3 +4,5 @@
 # Secrets
 *.secret
 *.credentials
+
+zen/
