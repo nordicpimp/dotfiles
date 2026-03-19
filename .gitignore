@@ -5,4 +5,15 @@
 *.secret
 *.credentials
 
-zen/
+# Zen browser runtime data
+zen/.config/zen/**/lock
+zen/.config/zen/**/*.sqlite
+zen/.config/zen/**/*.sqlite-shm
+zen/.config/zen/**/*.sqlite-wal
+zen/.config/zen/**/*.bin
+zen/.config/zen/**/sessionstore-backups/
+zen/.config/zen/**/datareporting/
+zen/.config/zen/**/storage/
+zen/.config/zen/**/zen-sessions-backup/
+zen/.config/zen/**/*.jsonlz4
+zen/.config/zen/**/*.baklz4
