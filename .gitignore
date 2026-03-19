@@ -6,6 +6,7 @@
 *.credentials
 
 # Zen browser runtime data
+zen/
 zen/.config/zen/**/lock
 zen/.config/zen/**/*.sqlite
 zen/.config/zen/**/*.sqlite-shm
