@@ -1,0 +1,54 @@
+/**
+ * Rofi wallpaper picker — 5 column thumbnail grid
+ * rofi 2.0.0 syntax
+ */
+
+@import "/home/nordicpimp/.config/rofi/theme.rasi"
+
+window {
+    width:    820px;
+    padding:  8px;
+    location: center;
+    anchor:   center;
+}
+
+inputbar {
+    background-color: transparent;
+    padding:          0px;
+    spacing:          0px;
+    children:         [prompt];
+}
+
+prompt {
+    text-color: transparent;
+    padding:    0px;
+}
+
+listview {
+    columns:  5;
+    lines:    3;
+    spacing:  4px;
+    padding:  0px;
+}
+
+element {
+    orientation:      vertical;
+    border-radius:    4px;
+    padding:          0px;
+    spacing:          0px;
+    background-color: var(surface);
+    cursor:           pointer;
+}
+
+element selected.normal {
+    background-color: var(primary);
+}
+
+element-icon {
+    size: 150px;
+}
+
+element-text {
+    color: transparent;
+    font:  "JetBrainsMono Nerd Font 1";
+}

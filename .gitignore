@@ -1,5 +1,6 @@
 # Generated color output — never commit these
 .cache/
+.researching_setup/
 
 # Secrets
 *.secret

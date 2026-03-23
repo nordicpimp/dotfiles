@@ -1,38 +1,81 @@
+/**
+ * Rofi main theme — rofi 2.0.0 syntax
+ * Colors hardcoded from current matugen palette.
+ * Auto-updated by matugen template (see dotfiles/matugen/templates/)
+ */
+
 * {
-    bg:      #1e1e2e;
-    fg:      #cdd6f4;
-    accent:  #89b4fa;
-    urgent:  #f38ba8;
+    bg:         rgba ( 17, 19, 24, 100 % );
+    surface:    rgba ( 30, 32, 41, 100 % );
+    primary:    rgba ( 169, 199, 255, 100 % );
+    on-primary: rgba ( 7, 48, 95, 100 % );
+    fg:         rgba ( 226, 226, 233, 100 % );
+    urgent:     rgba ( 255, 180, 171, 100 % );
 
     background-color: transparent;
-    text-color:       @fg;
+    text-color:       var(fg);
 }
 
 window {
-    background-color: @bg;
+    background-color: var(bg);
     border-radius:    8px;
-    padding:          12px;
+    border:           1px;
+    border-color:     var(surface);
+    padding:          8px;
     width:            40%;
 }
 
+mainbox {
+    background-color: transparent;
+    spacing:          8px;
+    padding:          4px;
+}
+
 inputbar {
-    background-color: @bg;
-    padding:          8px;
-    border-radius:    4px;
+    background-color: var(surface);
+    border-radius:    6px;
+    padding:          8px 12px;
+    spacing:          8px;
+    children:         [prompt, entry];
+}
+
+prompt {
+    text-color: var(primary);
+}
+
+entry {
+    text-color:        var(fg);
+    placeholder-color: var(fg);
+    placeholder:       "Search...";
 }
 
 listview {
     background-color: transparent;
     lines:            8;
-    spacing:          4px;
+    columns:          1;
+    spacing:          2px;
+    padding:          4px 0px;
 }
 
 element {
-    padding:       8px;
-    border-radius: 4px;
+    background-color: transparent;
+    border-radius:    6px;
+    padding:          8px 12px;
+    spacing:          10px;
+    orientation:      horizontal;
+    cursor:           pointer;
 }
 
-element selected {
-    background-color: @accent;
-    text-color:       @bg;
+element selected.normal {
+    background-color: var(primary);
+    text-color:       var(on-primary);
+}
+
+element-icon {
+    size:           24px;
+    vertical-align: 0.5;
+}
+
+element-text {
+    vertical-align: 0.5;
 }
