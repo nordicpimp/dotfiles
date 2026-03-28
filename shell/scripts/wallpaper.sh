@@ -62,6 +62,13 @@ case "$CURRENT_STYLE" in
         ;;
 esac
 
+# Reload kitty colors live in all running instances
+# Find the kitty socket dynamically — kitty may append PID to socket name
+KITTY_SOCKET=$(ls /tmp/kitty 2>/dev/null || ls /tmp/kitty-* 2>/dev/null | head -1)
+if [[ -n "$KITTY_SOCKET" ]]; then
+    kitty @ --to unix:"$KITTY_SOCKET" set-colors --all ~/.cache/matugen/colors-kitty.conf 2>/dev/null || true
+fi
+
 # Reload waybar with new colors
 pkill waybar
 sleep 0.5
