@@ -12,6 +12,9 @@ CHOICE=$(printf "fullwidth\nfloating\nislands" | rofi -dmenu \
 
 [[ -z "$CHOICE" ]] && exit 0
 
+# Save current style for wallpaper.sh to re-apply after wallpaper changes
+echo "$CHOICE" > "$HOME/.cache/waybar-style-current"
+
 # ── Write waybar style ────────────────────────────────────────────────────────
 cat > "$STYLE_FILE" << EOF
 /* Active waybar style — managed by waybar-style.sh */

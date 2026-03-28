@@ -20,7 +20,6 @@ SELECTION=$(
            -theme "/home/nordicpimp/.config/rofi/wallpaper.rasi"
 )
 
-FILENAME="${SELECTION%%$'\0'*}"
-[[ -z "$FILENAME" ]] && exit 0
+[[ -z "$SELECTION" ]] && exit 0
 
-wallpaper.sh "$WALLPAPER_DIR/$FILENAME"
+/home/nordicpimp/dotfiles/shell/scripts/wallpaper.sh "$WALLPAPER_DIR/$SELECTION"
