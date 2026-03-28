@@ -1,0 +1,98 @@
+[manager]
+cwd = { fg = "#f6bc70" }
+
+hovered          = { fg = "#462b00", bg = "#f6bc70" }
+previewed        = { fg = "#f6bc70" }
+selected         = { fg = "#3e2d16", bg = "#dec2a2" }
+hovered_selected = { fg = "#462b00", bg = "#f6bc70" }
+
+marker_selected = { fg = "#dec2a2", bg = "#dec2a2" }
+marker_copied   = { fg = "#b9cda0",  bg = "#b9cda0" }
+marker_cut      = { fg = "#ffb4ab",     bg = "#ffb4ab" }
+
+tab_active   = { fg = "#462b00", bg = "#f6bc70", bold = true }
+tab_inactive = { fg = "#d3c4b4" }
+
+find_keyword  = { fg = "#b9cda0", italic = true }
+find_position = { fg = "#f6bc70",  italic = true }
+
+[status]
+overall = { fg = "#ede0d4", bg = "#18120b" }
+
+sep_left  = { open = "", close = "", fg = "#9c8e80" }
+sep_right = { open = "", close = "", fg = "#9c8e80" }
+
+mode_normal  = { fg = "#462b00", bg = "#f6bc70", bold = true }
+mode_select  = { fg = "#3e2d16", bg = "#dec2a2", bold = true }
+mode_unset   = { fg = "#253514", bg = "#b9cda0", bold = true }
+
+progress_label  = { fg = "#ede0d4", bold = true }
+progress_normal = { fg = "#f6bc70", bg = "#18120b" }
+progress_error  = { fg = "#ffb4ab",   bg = "#18120b" }
+
+perm_type  = { fg = "#ede0d4" }
+perm_read  = { fg = "#b9cda0" }
+perm_write = { fg = "#ffb4ab" }
+perm_exec  = { fg = "#f6bc70" }
+perm_sep   = { fg = "#9c8e80" }
+
+[input]
+border   = { fg = "#f6bc70" }
+title    = { fg = "#f6bc70" }
+value    = { fg = "#ede0d4" }
+selected = { reversed = true }
+
+[completion]
+border   = { fg = "#9c8e80" }
+active   = { bg = "#4f4539" }
+inactive = { fg = "#d3c4b4" }
+
+[tasks]
+border  = { fg = "#9c8e80" }
+title   = {}
+hovered = { fg = "#f6bc70", underline = true }
+
+[which]
+mask            = { bg = "#18120b" }
+cand            = { fg = "#f6bc70" }
+rest            = { fg = "#d3c4b4" }
+desc            = { fg = "#d3c4b4" }
+separator       = "  "
+separator_style = { fg = "#4f4539" }
+
+[notify]
+title_info  = { fg = "#f6bc70" }
+title_warn  = { fg = "#b9cda0" }
+title_error = { fg = "#ffb4ab" }
+
+icon_info  = ""
+icon_warn  = ""
+icon_error = ""
+
+[filetype]
+rules = [
+  # Folders — use outline so they're visible but not glaring
+  { mime = "inode/directory", fg = "#f6bc70" },
+  # Images — tertiary accent
+  { mime = "image/*",  fg = "#b9cda0" },
+  # Media — secondary accent
+  { mime = "video/*",  fg = "#dec2a2" },
+  { mime = "audio/*",  fg = "#dec2a2" },
+  # Archives — muted primary
+  { mime = "application/zip",     fg = "#f6bc70" },
+  { mime = "application/x-tar",   fg = "#f6bc70" },
+  { mime = "application/x-bzip2", fg = "#f6bc70" },
+  { mime = "application/x-xz",    fg = "#f6bc70" },
+  { mime = "application/zstd",    fg = "#f6bc70" },
+  # Config/data files — subtle
+  { name = "*.toml", fg = "#9c8e80" },
+  { name = "*.yaml", fg = "#9c8e80" },
+  { name = "*.json", fg = "#9c8e80" },
+  { name = "*.conf", fg = "#9c8e80" },
+  # Markdown — slightly brighter
+  { name = "*.md",   fg = "#d3c4b4" },
+  # Executables
+  { name = "*.sh",   fg = "#b9cda0" },
+  # Fallback — normal text color
+  { url = "*",       fg = "#ede0d4" },
+]
