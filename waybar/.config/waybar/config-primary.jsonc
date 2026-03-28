@@ -2,7 +2,7 @@
     "layer": "top",
     "position": "top",
     "output": "DP-1",
-    "height": 36,
+    "height": 44,
     "spacing": 0,
 
     "modules-left": ["hyprland/workspaces"],

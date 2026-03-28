@@ -21,35 +21,39 @@ EOF
 # ── Apply matching Hyprland decoration ───────────────────────────────────────
 case "$CHOICE" in
     fullwidth)
-        # Edge to edge — no gaps, no rounding, thin border only
+        # Edge to edge — no gaps, no rounding, thin border, no shadow
         hyprctl keyword general:gaps_in 0
         hyprctl keyword general:gaps_out 0
         hyprctl keyword general:border_size 1
         hyprctl keyword decoration:rounding 0
         hyprctl keyword decoration:shadow:enabled false
         hyprctl keyword decoration:blur:enabled false
-        # Un-float all windows
         hyprctl dispatch workspaceopt allfloat
         ;;
     floating)
-        # Standard tiled — moderate gaps, slight rounding
-        hyprctl keyword general:gaps_in 3
-        hyprctl keyword general:gaps_out 6
+        # Tiled pill — gaps/rounding match waybar pill (margin 8px, radius 12px)
+        # Shadow range kept tiny so it doesn't add visual padding beyond gaps_out
+        hyprctl keyword general:gaps_in 4
+        hyprctl keyword general:gaps_out 8
         hyprctl keyword general:border_size 1
-        hyprctl keyword decoration:rounding 5
+        hyprctl keyword decoration:rounding 12
         hyprctl keyword decoration:shadow:enabled true
+        hyprctl keyword decoration:shadow:range 4
+        hyprctl keyword decoration:shadow:render_power 1
         hyprctl keyword decoration:blur:enabled true
         hyprctl dispatch workspaceopt allfloat
         ;;
     islands)
-        # All windows float — generous gaps, rounded, prominent borders
+        # Floating windows — gaps/rounding match waybar islands (margin 16px, radius 10px)
+        # Shadow range kept tight so visual edge aligns with gaps_out
         hyprctl keyword general:gaps_in 8
         hyprctl keyword general:gaps_out 16
         hyprctl keyword general:border_size 2
         hyprctl keyword decoration:rounding 10
         hyprctl keyword decoration:shadow:enabled true
+        hyprctl keyword decoration:shadow:range 6
+        hyprctl keyword decoration:shadow:render_power 1
         hyprctl keyword decoration:blur:enabled true
-        # Toggle all windows to float on current workspace
         hyprctl dispatch workspaceopt allfloat
         ;;
 esac

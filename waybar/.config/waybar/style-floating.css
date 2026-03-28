@@ -20,8 +20,9 @@ window#waybar > box {
     background-color: alpha(@background, 0.92);
     border: 1px solid @surface;
     border-radius: 12px;
-    margin: 6px 8px 0;
+    margin: 8px 8px 0;
     padding: 0 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
 }
 
 #workspaces { padding: 0 4px; }
