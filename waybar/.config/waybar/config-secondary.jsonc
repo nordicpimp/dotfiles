@@ -1,0 +1,32 @@
+{
+    "layer": "top",
+    "position": "top",
+    "output": "HDMI-A-1",
+    "height": 36,
+    "spacing": 0,
+
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["tray"],
+
+    "hyprland/workspaces": {
+        "monitor": "HDMI-A-1",
+        "format": "●",
+        "persistent-workspaces": {
+            "HDMI-A-1": [5, 6]
+        },
+        "sort-by-number": true,
+        "on-click": "activate",
+        "tooltip": false
+    },
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "tooltip": false
+    },
+
+    "tray": {
+        "spacing": 6,
+        "icon-size": 16
+    }
+}

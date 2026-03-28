@@ -1,14 +1,11 @@
 {
     "layer": "top",
     "position": "top",
+    "output": "DP-1",
     "height": 36,
     "spacing": 0,
 
-    "modules-left": [
-        "hyprland/workspaces#primary",
-        "custom/separator",
-        "hyprland/workspaces#secondary"
-    ],
+    "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
     "modules-right": [
         "cpu",
@@ -21,22 +18,11 @@
         "custom/notification"
     ],
 
-    "hyprland/workspaces#primary": {
+    "hyprland/workspaces": {
         "monitor": "DP-1",
         "format": "●",
         "persistent-workspaces": {
             "DP-1": [1, 2, 3, 4]
-        },
-        "sort-by-number": true,
-        "on-click": "activate",
-        "tooltip": false
-    },
-
-    "hyprland/workspaces#secondary": {
-        "monitor": "HDMI-A-1",
-        "format": "●",
-        "persistent-workspaces": {
-            "HDMI-A-1": [5, 6]
         },
         "sort-by-number": true,
         "on-click": "activate",
@@ -87,7 +73,10 @@
 
     "tray": {
         "spacing": 6,
-        "icon-size": 16
+        "icon-size": 16,
+        "show-passive-items": false,
+        "reverse-direction": false,
+        "ignored-items": ["spotify"]
     },
 
     "custom/notification": {

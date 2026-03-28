@@ -1,0 +1,99 @@
+/*
+ * waybar base styles — shared by all three themes
+ */
+
+@import "/home/nordicpimp/.cache/matugen/colors-waybar.css";
+
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13px;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    box-shadow: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* ── Workspace dots ──────────────────────────────────────────── */
+
+#workspaces {
+    padding: 0 4px;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background: transparent;
+    border-radius: 4px;
+    font-size: 9px;
+    min-width: 16px;
+    /* inactive = faded dot */
+    color: alpha(@on_surface, 0.25);
+}
+
+#workspaces button:hover {
+    color: alpha(@on_surface, 0.6);
+    background: transparent;
+}
+
+#workspaces button.active {
+    /* active = full primary color dot */
+    color: @primary;
+}
+
+#workspaces button.urgent {
+    color: @error;
+}
+
+/* ── Separator ───────────────────────────────────────────────── */
+
+#custom-separator {
+    color: alpha(@on_surface, 0.2);
+    padding: 0 4px;
+    font-size: 11px;
+}
+
+/* ── Modules ─────────────────────────────────────────────────── */
+
+#clock,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#tray,
+#custom-notification {
+    padding: 0 10px;
+    color: @on_surface;
+}
+
+#clock {
+    color: @primary;
+    font-weight: 500;
+}
+
+#cpu,
+#memory {
+    color: @secondary;
+}
+
+#custom-notification {
+    padding: 0 8px;
+}
+
+/* ── Tray context menu ───────────────────────────────────────── */
+
+menu {
+    background-color: @background;
+    border: 1px solid @surface;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+menu menuitem {
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: @on_surface;
+}
+
+menu menuitem:hover {
+    background-color: alpha(@primary, 0.2);
+}

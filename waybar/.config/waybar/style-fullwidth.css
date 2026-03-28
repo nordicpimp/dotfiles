@@ -1,0 +1,57 @@
+/* style-fullwidth.css — edge to edge bar */
+@import "/home/nordicpimp/.cache/matugen/colors-waybar.css";
+
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13px;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    box-shadow: none;
+}
+
+window#waybar {
+    background-color: @background;
+    border-bottom: 1px solid @surface;
+    color: @on_surface;
+}
+
+#workspaces { padding: 0 4px; }
+
+#workspaces button {
+    padding: 0 5px;
+    background: transparent;
+    border-radius: 4px;
+    font-size: 9px;
+    min-width: 16px;
+    color: alpha(@on_surface, 0.25);
+}
+
+#workspaces button:hover { color: alpha(@on_surface, 0.6); background: transparent; }
+#workspaces button.active { color: @primary; }
+#workspaces button.urgent { color: @error; }
+
+#custom-separator {
+    color: alpha(@on_surface, 0.2);
+    padding: 0 4px;
+    font-size: 11px;
+}
+
+#clock, #cpu, #memory, #network, #pulseaudio, #tray, #custom-notification {
+    padding: 0 10px;
+    color: @on_surface;
+}
+
+#clock { color: @primary; font-weight: 500; }
+#cpu, #memory { color: @secondary; }
+#custom-notification { padding: 0 8px; }
+
+menu {
+    background-color: @background;
+    border: 1px solid @surface;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+menu menuitem { padding: 4px 8px; border-radius: 4px; color: @on_surface; }
+menu menuitem:hover { background-color: alpha(@primary, 0.2); }
