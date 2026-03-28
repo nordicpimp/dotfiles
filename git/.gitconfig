@@ -1,0 +1,10 @@
+[user]
+	name = Nordic P.I.M.P.
+	email = nordicpimp@proton.me
+[init]
+	defaultBranch = main
+[core]
+	editor = nano
+	pager = less
+[credential]
+	helper = store

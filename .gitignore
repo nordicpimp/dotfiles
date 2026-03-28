@@ -19,3 +19,6 @@ zen/.config/zen/**/storage/
 zen/.config/zen/**/zen-sessions-backup/
 zen/.config/zen/**/*.jsonlz4
 zen/.config/zen/**/*.baklz4
+
+shell/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+shell/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting

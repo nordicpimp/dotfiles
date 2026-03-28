@@ -39,6 +39,7 @@ fi
 matugen image --source-color-index 0 "$WALLPAPER"
 
 # Reload apps
-pkill waybar && uwsm app -- waybar &
+# pkill waybar && uwsm app -- waybar &
+pkill waybar; uwsm app -- waybar &
 hyprctl reload
 swaync-client -R
